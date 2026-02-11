@@ -105,6 +105,25 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Second bullet hole */}
+      <div className="bullet-hole top-[35%] right-[10%]">
+        <div className="bullet-cracks">
+          <div className="bullet-crack" />
+          <div className="bullet-crack" />
+          <div className="bullet-crack" />
+          <div className="bullet-crack" />
+          <div className="bullet-crack" />
+          <div className="bullet-crack" />
+          <div className="bullet-crack" />
+          <div className="bullet-crack" />
+          <div className="bullet-crack-secondary" />
+          <div className="bullet-crack-secondary" />
+          <div className="bullet-crack-secondary" />
+          <div className="bullet-crack-secondary" />
+          <div className="bullet-crack-secondary" />
+        </div>
+      </div>
+
       {/* Top hazard stripe */}
       <div className="absolute top-0 left-0 right-0 h-2 hazard-stripes" />
 
@@ -149,6 +168,56 @@ export default function Home() {
         <p className="mt-8 text-sm text-zinc-600 font-mono uppercase tracking-widest">
           Break things here
         </p>
+      </div>
+
+      {/* ============================================
+          CRASH TEST DUMMY MEME
+          ============================================ */}
+      <div className="crash-dummy-container absolute bottom-[20%] left-[5%] md:left-[10%] w-32 h-40 md:w-40 md:h-48 -rotate-12 hover:rotate-0 transition-transform duration-300">
+        <svg viewBox="0 0 100 140" className="w-full h-full drop-shadow-lg">
+          {/* Dummy Head */}
+          <circle cx="50" cy="35" r="28" fill="#FFD93D" stroke="#1a1a1a" strokeWidth="2"/>
+          {/* Target circles on face */}
+          <circle cx="50" cy="35" r="22" fill="none" stroke="#1a1a1a" strokeWidth="1.5"/>
+          <circle cx="50" cy="35" r="15" fill="none" stroke="#1a1a1a" strokeWidth="1.5"/>
+          <circle cx="50" cy="35" r="8" fill="none" stroke="#1a1a1a" strokeWidth="1.5"/>
+          {/* Cross hairs */}
+          <line x1="50" y1="7" x2="50" y2="63" stroke="#1a1a1a" strokeWidth="1.5"/>
+          <line x1="22" y1="35" x2="78" y2="35" stroke="#1a1a1a" strokeWidth="1.5"/>
+          {/* Dizzy spiral eyes */}
+          <g className="dummy-eyes">
+            <path d="M38 30 Q42 26 38 32 Q34 36 40 32 Q44 28 40 34" fill="none" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M62 30 Q58 26 62 32 Q66 36 60 32 Q56 28 60 34" fill="none" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round"/>
+          </g>
+          {/* Wobbly smile */}
+          <path d="M38 45 Q44 52 50 48 Q56 44 62 50" fill="none" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round"/>
+          {/* Body */}
+          <rect x="35" y="65" width="30" height="45" rx="3" fill="#FFD93D" stroke="#1a1a1a" strokeWidth="2"/>
+          {/* Body target */}
+          <circle cx="50" cy="87" r="12" fill="none" stroke="#1a1a1a" strokeWidth="1.5"/>
+          <circle cx="50" cy="87" r="6" fill="none" stroke="#1a1a1a" strokeWidth="1.5"/>
+          <line x1="50" y1="70" x2="50" y2="104" stroke="#1a1a1a" strokeWidth="1.5"/>
+          <line x1="38" y1="87" x2="62" y2="87" stroke="#1a1a1a" strokeWidth="1.5"/>
+          {/* Arms flopping */}
+          <path d="M35 70 Q20 75 15 95" fill="none" stroke="#FFD93D" strokeWidth="8" strokeLinecap="round"/>
+          <path d="M35 70 Q20 75 15 95" fill="none" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M65 70 Q80 65 88 80" fill="none" stroke="#FFD93D" strokeWidth="8" strokeLinecap="round"/>
+          <path d="M65 70 Q80 65 88 80" fill="none" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round"/>
+          {/* Legs */}
+          <path d="M40 110 Q38 125 35 135" fill="none" stroke="#FFD93D" strokeWidth="8" strokeLinecap="round"/>
+          <path d="M40 110 Q38 125 35 135" fill="none" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M60 110 Q62 125 68 135" fill="none" stroke="#FFD93D" strokeWidth="8" strokeLinecap="round"/>
+          <path d="M60 110 Q62 125 68 135" fill="none" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round"/>
+          {/* Impact stars */}
+          <text x="75" y="20" className="text-xs fill-red-500 font-bold">★</text>
+          <text x="18" y="55" className="text-xs fill-amber-500 font-bold">✦</text>
+          <text x="82" y="70" className="text-xs fill-red-400 font-bold">✶</text>
+        </svg>
+        {/* Speech bubble */}
+        <div className="absolute -top-8 -right-4 bg-white text-black text-xs font-bold px-2 py-1 rounded-lg shadow-md transform rotate-6 whitespace-nowrap">
+          this is fine 🔥
+          <div className="absolute -bottom-1 left-3 w-2 h-2 bg-white transform rotate-45"></div>
+        </div>
       </div>
 
       {/* Leaked Documents Section */}
