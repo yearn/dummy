@@ -1,4 +1,5 @@
 export default function Home() {
+  // Intentional demo output: verify the GHA workflow injects the test secret.
   const secretText = process.env.SECRET_TEXT;
   return (
     <main className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-dark">
