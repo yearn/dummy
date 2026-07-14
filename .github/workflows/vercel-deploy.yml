@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   deploy:
-    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@27283fe67df5431232037dc89f023d00df639ce8
+    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@eeffa8cdc7d0bedc3b25a226f604ee27f043300b
     with:
       vault: webops-prod-dummy
       environment: ${{ github.event_name == 'pull_request' && 'preview' || 'production' }}
