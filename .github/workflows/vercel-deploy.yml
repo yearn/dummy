@@ -22,5 +22,6 @@ jobs:
       environment: ${{ github.event_name == 'pull_request' && 'preview' || 'production' }}
       secrets: |
         SECRET_TEXT=dummy/SECRET_TEXT
+        NEXT_PUBLIC_TEXT=dummy/NEXT_PUBLIC_TEXT
     secrets:
       OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
