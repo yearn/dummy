@@ -12,12 +12,12 @@ permissions:
 
 jobs:
   deploy:
-    # yearn-gha fix/vercel-1p-env-sync @ d87bb75ae701ba68e0d4128a4f98fbbd835e7bec
+    # yearn-gha fix/vercel-1p-env-sync @ 1135f3fb707d8ef37f9b1bf3ec8b7895927a622e
     # 1P → vercel env --sensitive, pure CLI pull/build/deploy --prebuilt,
     # github deployment record + pr deployment-url comment
-    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@d87bb75ae701ba68e0d4128a4f98fbbd835e7bec
+    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@1135f3fb707d8ef37f9b1bf3ec8b7895927a622e
     with:
-      workflows-ref: d87bb75ae701ba68e0d4128a4f98fbbd835e7bec
+      workflows-ref: 1135f3fb707d8ef37f9b1bf3ec8b7895927a622e
       vault: webops-prod-dummy
       environment: ${{ github.event_name == 'pull_request' && 'preview' || 'production' }}
       secrets: |
