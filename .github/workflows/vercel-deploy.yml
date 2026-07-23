@@ -14,7 +14,7 @@ permissions:
 jobs:
   deploy:
     # yearn-gha spike-infisical: shared+app two-fetch, env derived from event
-    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@a7ee77ba8fd3c7f0cb64d5dc13cd057e9f984836
+    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@a66af95
     with:
       project-slug: dummy-practice
       preview-env-slug: dev
