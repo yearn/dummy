@@ -8,20 +8,15 @@ on:
 permissions:
   contents: read
   deployments: write
+  id-token: write
   pull-requests: write
 
 jobs:
   deploy:
-    # yearn-gha fix/vercel-1p-env-sync @ 86d2fd001f5c6692b20e66339863668a7366e5e9
-    # 1P → vercel env --sensitive, pure CLI pull/build/deploy --prebuilt,
-    # github deployment record + pr deployment-url comment
-    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@86d2fd001f5c6692b20e66339863668a7366e5e9
+    # TODO: pin to the yearn-gha sha once the Infisical workflow lands
+    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@spike-infisical
     with:
-      workflows-ref: 86d2fd001f5c6692b20e66339863668a7366e5e9
-      vault: webops-prod-dummy
+      project-slug: webops-prod-dummy
+      # TODO: fill with the machine identity UUIDs created in Infisical
+      identity-id: ${{ github.event_name == 'pull_request' && '<preview-identity-uuid>' || '<production-identity-uuid>' }}
       environment: ${{ github.event_name == 'pull_request' && 'preview' || 'production' }}
-      secrets: |
-        SECRET_TEXT=dummy/SECRET_TEXT
-        NEXT_PUBLIC_TEXT=dummy/NEXT_PUBLIC_TEXT
-    secrets:
-      OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
