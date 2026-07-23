@@ -13,9 +13,8 @@ permissions:
 
 jobs:
   deploy:
-    # yearn-gha spike-infisical: infisical oidc + vercel remote build
-    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@db964157cb49f435deff1dca68760c3c9008b993
+    # yearn-gha spike-infisical: shared+app two-fetch, env derived from event
+    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@8ce7aba9d71a00f0fe246e5e7270f94be78f3085
     with:
       project-slug: dummy-test-be7p
       identity-id: 4a214b11-b34b-4e2e-8688-b1e56787b1a3
-      environment: ${{ github.event_name == 'pull_request' && 'preview' || 'production' }}
