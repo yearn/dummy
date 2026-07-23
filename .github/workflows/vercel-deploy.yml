@@ -16,6 +16,6 @@ jobs:
     # yearn-gha spike-infisical: infisical oidc + vercel remote build
     uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@db964157cb49f435deff1dca68760c3c9008b993
     with:
-      project-slug: dummy-test
+      project-slug: dummy-test-be7p
       identity-id: 4a214b11-b34b-4e2e-8688-b1e56787b1a3
       environment: ${{ github.event_name == 'pull_request' && 'preview' || 'production' }}
