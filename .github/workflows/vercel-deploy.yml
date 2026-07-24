@@ -19,4 +19,4 @@ jobs:
       project-slug: dummy-practice
       preview-env-slug: dev
       env-slug: prod
-      identity-id: ${{ secrets.IDENTITY_ID }}
+      identity-id: 4a214b11-b34b-4e2e-8688-b1e56787b1a3
