@@ -11,6 +11,8 @@ permissions:
   id-token: write
   pull-requests: write
 
+env:
+  IDENTITY_ID: ${{ secrets.IDENTITY_ID }}
 jobs:
   deploy:
     # yearn-gha spike-infisical: shared+app two-fetch, env derived from event
@@ -19,4 +21,4 @@ jobs:
       project-slug: dummy-practice
       preview-env-slug: dev
       env-slug: prod
-      identity-id: ${{ secrets.IDENTITY_ID }}
+      identity-id: ${{ env.IDENTITY_ID }}
