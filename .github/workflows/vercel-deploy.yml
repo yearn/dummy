@@ -5,6 +5,10 @@ on:
   push:
     branches: [main]
 
+concurrency:
+  group: vercel-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
   deployments: write
@@ -14,10 +18,7 @@ permissions:
 jobs:
   deploy:
     # yearn-gha spike-infisical: shared+app two-fetch, env derived from event
-    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@10bc1be9dad5562ab7a91ab19285dd89cf938fc0
+    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@5af200955b947b98f5db62d7294d798efdb56996
     with:
       project-slug: dummy-practice
-      shared-identity-id: ba7ada11-cb47-4e82-9a28-9860c3f5a6ad
-      preview-env-slug: dev
-      env-slug: prod
       identity-id: d677f107-e29c-45d0-8c1e-96279f45ca28
