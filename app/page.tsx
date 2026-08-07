@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-dark">
       <p>{secretText}</p>
+      <p>{process.env.NEXT_PUBLIC_TEXT}</p>
       {/* Grid overlay */}
       <div className="absolute inset-0 grid-overlay" />
 
