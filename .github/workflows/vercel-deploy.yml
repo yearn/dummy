@@ -17,9 +17,7 @@ permissions:
 
 jobs:
   deploy:
-    # yearn-gha spike-infisical @ 2b1600ecbdc7ae55daf59be268d81239bd6f7ecb — default mode (app prod:/deploy-config)
-    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@96e9ba35773773d460580a7a6860e9f361b734be
+    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@9701cd661a98fda358bb7b273b2baab97f12dea2
     with:
-      project-slug: dummy-practice
-      # single preview identity for harness; production identity not wired yet
-      identity-id: d677f107-e29c-45d0-8c1e-96279f45ca28
+      project: dummy-practice
+      identity-id: ${{ github.event_name == 'pull_request' && vars.DOPPLER_PREVIEW_IDENTITY_ID || vars.DOPPLER_PRODUCTION_IDENTITY_ID }}
