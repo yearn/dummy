@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   deploy:
-    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@4f8fabb520efa21678d8cafc6808ad67b576a576
+    uses: yearn/yearn-gha/.github/workflows/vercel-deploy.yml@9701cd661a98fda358bb7b273b2baab97f12dea2
     with:
       project: dummy-practice
-      identity-id: 15ea1d36-986f-46de-815e-e27cc7fc5566
+      identity-id: ${{ github.event_name == 'pull_request' && vars.DOPPLER_PREVIEW_IDENTITY_ID || vars.DOPPLER_PRODUCTION_IDENTITY_ID }}
